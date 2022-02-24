@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <title>Background Generator</title>
 </head>
 
-<body id="gradient" class="gradient">
-    <h1> Background Generator</h1>
-    <input type="color" name="color1" id="color1" value="#007000">
-    <input type="text" name="value" id="ValueColor1">
-    <input type="color" name="color2" id="color2" value="#ffffff">
-    <input type="text" name="value" id="ValueColor2">
-    <h3>Current Background</h3>
-    <input type="text" id="Cssprop">
-    <div class="resultColor" style="height: 100px; width: 300px; border: solid 2px gray;"></div>
+<body>
+    <div class="container">
+        <h1> Background Generator</h1>
+        <div class="colors">
+            <div class="color">
+                <input class="color-picker"  type="color" name="color1" id="color1" value="#007000">
+                <input class="color-Id" type="text" name="value" id="ValueColor1">
+            </div>
+            <div class="color">
+                <input class="color-picker" type="color" name="color2" id="color2" value="#f9f9f9">
+                <input class="color-Id" type="text" name="value" id="ValueColor2">
+            </div>
+        </div>
+        <h3>Current Background</h3>
+        <div class="container-css-prop" onclick="copyToClickBoard()">
+            <div>
+                <input type="text" id="Cssprop">
+            </div>
+            <div class="click-option">
+                <p>Click to copy  <i class="fa-solid fa-clipboard"></i></p>
+            </div>
+           
+        </div>
+        
+
+        <div class="resultColor"></div>
+    </div>
+
 </body>
+
 </html>
 <script>
     let color1 = document.querySelector('#color1');
@@ -26,23 +48,29 @@
     let bodyColor = document.querySelector('#gradient');
     let resultColor = document.querySelector('.resultColor');
     let cssprop = document.querySelector('#Cssprop');
-    
-    color1.addEventListener('input',generateColor);
-    color2.addEventListener('input',generateColor);
 
-    function generateColor (){
-       //console.log( "from func" + color1.value);
+    color1.addEventListener('input', generateColor);
+    color2.addEventListener('input', generateColor);
+
+    function generateColor() {
+        //console.log( "from func" + color1.value);
         //console.log(resultColor);
-        color1ActualValue1.value =  color1.value;
-        color1ActualValue2.value =  color2.value;
-        setBGCorlo(color1ActualValue1.value ,color1ActualValue2.value )
+        color1ActualValue1.value = color1.value;
+        color1ActualValue2.value = color2.value;
+        setBGCorlo(color1ActualValue1.value, color1ActualValue2.value)
     }
-    function setBGCorlo(col1, col2){
+    function setBGCorlo(col1, col2) {
         //console.log('btn mriguel' + color2.value)
         let gradientColor = `linear-gradient(to right, ${col1} ,${col2})`;
         console.log(gradientColor);
         resultColor.style.backgroundImage = gradientColor;
-        cssprop.value = " background-Image:"+gradientColor;
+        cssprop.value = " background-Image:" + gradientColor;
         //resultColor.style.backgroundColor = color1.value;
     }
+
+    function copyToClickBoard(){
+    var content =document.querySelector('#Cssprop').value;
+    navigator.clipboard.writeText(content)
+    }
+
 </script>
