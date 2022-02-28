@@ -15,32 +15,44 @@
 <body>
     <div class="container">
         <h1> Background Generator</h1>
-        <select name="Type">
+        <!-- <select name="Type">
             <option value="">Linear Gradients (goes down/up/left/right/diagonally)</option>
             <option value="">Radial Gradients (defined by their center)</option>
             <option value="">Conic Gradients (rotated around a center point)</option>
-        </select>
+        </select> -->
         <div class="colors">
             <div class="color">
-                <input class="color-picker" type="color" name="color1" id="color1" value="#bae9ba">
-                <input class="color-Id" type="text" name="value" id="ValueColor1" disabled="disabled">
+                <input class="color-picker" type="color" id="color1" value="#bae9ba">
+                <input class="color-Id" type="text"  id="ValueColor1" disabled="disabled">
             </div>
             <div class="color">
-                <input class="color-picker" type="color" name="color2" id="color2" value="#fcffc2">
-                <input class="color-Id" type="text" name="value" id="ValueColor2" disabled="disabled">
+                <input class="color-picker" type="color" id="color2" value="#fcffc2">
+                <input class="color-Id" type="text" id="ValueColor2" disabled="disabled">
             </div>
         </div>
+
         <div class="settings">
+            <div>
+                <label for="numberColors">Add more colors</label>
+                <select name="" id="numberColors" onchange="numberOfColors(this.value)">
+                    <option value="1">1 more color</option>
+                    <option value="2">2 more colors</option>
+                    <option value="3">3 more colors</option>
+                    <option value="4">4 more colors</option>
+                    <option value="5">5 more colors</option>
+                </select>
+            </div>
 
-            <label for="colorDirection">Select the derection of BG color</label>
-            <select name="" id="colorDirection" onchange="gradientDirection(this.value)">
-                <option value="1">Top to bottom</option>
-                <option value="2">Left to right</option>
-                <option value="5">Right to left</option>
-                <option value="3">Top left to bottom right</option>
-                <option value="4">180deg</option>
-            </select>
-
+            <div>
+                <label for="colorDirection">Select the derection of BG color</label>
+                <select name="" id="colorDirection" onchange="gradientDirection(this.value)">
+                    <option value="1">Top to bottom</option>
+                    <option value="2">Left to right</option>
+                    <option value="5">Right to left</option>
+                    <option value="3">Top left to bottom right</option>
+                    <option value="4">180deg</option>
+                </select>
+            </div>
         </div>
         <h3>Current Background</h3>
         <div class="resultColor"></div>

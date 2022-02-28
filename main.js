@@ -65,3 +65,28 @@ function gradientDirection(typeId){
     color1ActualValue2.value = color2.value;
     setBGCorlo(direction,color1ActualValue1.value  ,color1ActualValue2.value);
 }
+function numberOfColors(selectedNumber){
+
+    let colorsBox = document.querySelector(".colors");
+    let colorBox = document.querySelector(".color");
+
+    for(let i =0; i<selectedNumber; i++){
+
+        let colorPicker = document.createElement('input');
+        colorPicker.setAttribute("type","color");
+        colorPicker.className = "color-picker";
+        colorPicker.id = "color"+i;
+        colorPicker.value='#b9eaea'
+
+        let colorHexaCode = document.createElement('input');
+        colorHexaCode.className = "color-Id"
+        colorHexaCode.id = "ValueColor"+i;
+
+        colorBox.appendChild(colorPicker);
+        colorBox.appendChild(colorHexaCode);
+
+        colorsBox.appendChild(colorBox);
+    };
+
+}
+
