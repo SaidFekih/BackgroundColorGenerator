@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Background Generator</title>
 </head>
+
 <body>
     <div class="container">
         <h1> Background Generator</h1>
@@ -17,7 +19,7 @@
             <option value="">Linear Gradients (goes down/up/left/right/diagonally)</option>
             <option value="">Radial Gradients (defined by their center)</option>
             <option value="">Conic Gradients (rotated around a center point)</option>
-            </select>
+        </select>
         <div class="colors">
             <div class="color">
                 <input class="color-picker" type="color" name="color1" id="color1" value="#bae9ba">
@@ -28,21 +30,36 @@
                 <input class="color-Id" type="text" name="value" id="ValueColor2" disabled="disabled">
             </div>
         </div>
+        <div class="settings">
+
+            <label for="colorDirection">Select the derection of BG color</label>
+            <select name="" id="colorDirection" onchange="gradientDirection(this.value)">
+                <option value="1">Top to bottom</option>
+                <option value="2">Left to right</option>
+                <option value="5">Right to left</option>
+                <option value="3">Top left to bottom right</option>
+                <option value="4">180deg</option>
+            </select>
+
+        </div>
         <h3>Current Background</h3>
         <div class="resultColor"></div>
+
         <div class="container-css-prop" onclick="copyToClickBoard()">
+
             <div class="result-content">
                 <textarea type="text" id="Cssprop" disabled="disabled"></textarea>
             </div>
+
             <div class="click-option">
                 <p><i class="fa-solid fa-clipboard"></i> Click anywhere in the box to copy the property.</p>
             </div>
-           
-        </div> 
-        <div class="modal">
-            
+
         </div>
-        <p id="coppied" onclick="hideMessage()">Coppied !</p>
+
+        <div class="modal"></div>
+
+        <p class="btn" id="coppied" onclick="hideMessage()">Coppied !</p>
     </div>
 </body>
 
