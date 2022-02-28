@@ -78,6 +78,29 @@ body{
     text-align: center;
     resize : none;
 }
+#coppied{
+    border-radius: 3px;
+    border: solid 1px gray;
+    padding-top: 5px;
+    padding-bottom: 8px;
+    text-align: center;
+    font-size: 1.4em;
+    background: #bac5e9;
+    width: 135px;
+    height: 26px;
+    position: relative;
+    left: 1%;
+    top: -31%;
+    display: none;
+}
+.modal{
+    height: 100vh;
+    width: 100vh;
+    position: absolute;
+    background-color: black;
+    opacity: 0.6;
+    display: none;
+}
 
 @media only screen and (max-width: 420px) {
 

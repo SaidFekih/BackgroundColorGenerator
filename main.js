@@ -7,6 +7,8 @@ let color1ActualValue2 = document.querySelector('#ValueColor2');
 let bodyColor = document.querySelector('#gradient');
 let resultColor = document.querySelector('.resultColor');
 let cssprop = document.querySelector('#Cssprop');
+let coppied = document.querySelector('#coppied');
+let modal = document.querySelector(".modal")
 
 color1.addEventListener('input', generateColor);
 color2.addEventListener('input', generateColor);
@@ -32,4 +34,13 @@ function setBGCorlo(col1, col2) {
 function copyToClickBoard() {
     var content = document.querySelector('#Cssprop').value;
     navigator.clipboard.writeText(content)
+    confirmationMessage();
+}
+function confirmationMessage(){
+    coppied.setAttribute("style","display: block;"); 
+    modal.setAttribute("style","display: block;"); 
+}
+function hideMessage(){
+    coppied.setAttribute("style","display: none;"); 
+    modal.setAttribute("style","display: none;"); 
 }
