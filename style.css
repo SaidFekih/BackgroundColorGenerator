@@ -26,7 +26,7 @@ body{
     background-color: transparent;
     border: 0px;
     height: 40px;
-    width: 150px;
+    min-width: 6em;
     cursor: pointer;
 } 
 .color-Id{
@@ -40,35 +40,61 @@ body{
     position: relative;
     display:block ;
     min-width: 24.5em;
-    min-height: 10em;
+    min-height: 7em;
     border: solid 2px gray;
     overflow: hidden;
     margin-bottom: 15px;
+    cursor: pointer;
 }
-#Cssprop{
-    border: 0;
-    margin: 10px;
-    padding: 5px;
-    font-size: 1em;
-    text-align: center;
-    min-width: 30em;
-    overflow-wrap: break-word;
 
-}
 .resultColor{
     min-width: 24.5em;
     min-height: 10em;
     border: solid 2px gray;
+    margin-bottom: 15px;
     
 }
 .click-option{
     box-sizing: content-box;
    position: absolute;
-   padding: 1px;
+   padding: 0px;
    color: rgb(131, 131, 131);
    background-color: rgb(231, 229, 229); 
    text-align: center;
    bottom: 0;
    width:100%;
 }
+.result-content{
+    padding: 0px;
+    box-sizing: content-box;
+}
+.result-content textarea{
+    border: none;
+    margin: 0;
+    padding-top: 10px;
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+    text-align: center;
+    resize : none;
+}
 
+@media only screen and (max-width: 420px) {
+
+    .container-css-prop{
+        min-width: 270px;
+        width: auto !important;
+    }
+    .color{
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    .color-picker{
+        width: 100%;
+    }
+    .resultColor{
+        min-width: 270px;
+        margin-bottom: 10px;
+    }
+}
