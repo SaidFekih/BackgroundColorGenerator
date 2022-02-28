@@ -92,6 +92,7 @@ body{
     left: 1%;
     top: -31%;
     display: none;
+    cursor: pointer;
 }
 .modal{
     height: 100vh;
