@@ -81,12 +81,12 @@ function numberOfColors(selectedNumber){
         let colorHexaCode = document.createElement('input');
         colorHexaCode.className = "color-Id"
         colorHexaCode.id = "ValueColor"+i;
+        colorHexaCode.disabled = "disabled";
+        colorHexaCode.value = colorPicker.value;
 
         colorBox.appendChild(colorPicker);
         colorBox.appendChild(colorHexaCode);
 
         colorsBox.appendChild(colorBox);
-    };
-
+    }
 }
-
