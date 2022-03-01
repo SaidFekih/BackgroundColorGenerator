@@ -37,6 +37,7 @@ body{
     font-size: 1.4em;
     text-align: center;
     min-width: 6em;
+    
 }
 .container-css-prop{
     position: relative;
@@ -110,13 +111,13 @@ body{
 }
 .settings{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     max-width:32em ;
     align-items: center;
     align-content: center;
     justify-content: space-around;
-    margin:10px auto;
+    margin-bottom: 10px;
 }
 .settings label{
     margin: 0 10px;
@@ -128,6 +129,9 @@ body{
     align-content: space-between;
     align-items: center;
     margin: 4px auto;
+}
+#addColor{
+    min-width:16.56em;
 }
 
 @media only screen and (max-width: 420px) {

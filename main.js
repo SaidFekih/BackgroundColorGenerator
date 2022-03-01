@@ -4,6 +4,8 @@ let color1 = document.querySelector('#color1');
 let color1ActualValue1 = document.querySelector('#ValueColor1');
 let color2 = document.querySelector('#color2');
 let color1ActualValue2 = document.querySelector('#ValueColor2');
+let color3 = document.querySelector('#color3');
+let color1ActualValue3 = document.querySelector('#ValueColor3');
 let bodyColor = document.querySelector('#gradient');
 let resultColor = document.querySelector('.resultColor');
 let cssprop = document.querySelector('#Cssprop');
@@ -13,12 +15,14 @@ let gradientDirectionColor = 'to bottom';
 
 color1.addEventListener('input', generateColor);
 color2.addEventListener('input', generateColor);
+color3.addEventListener('input', generateColor);
 
 function generateColor() {
     //console.log( "from func" + color1.value);
     //console.log(resultColor);
     color1ActualValue1.value = color1.value;
     color1ActualValue2.value = color2.value;
+    color1ActualValue3.value = color3.value;
     setBGCorlo('to bottom', color1ActualValue1.value, color1ActualValue2.value)
     clearTimeout(myTimeout);
 }
