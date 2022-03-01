@@ -86,7 +86,6 @@ function numberOfColors(selectedNumber){
 
         colorBox.appendChild(colorPicker);
         colorBox.appendChild(colorHexaCode);
-
         colorsBox.appendChild(colorBox);
     }
 }
