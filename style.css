@@ -16,7 +16,7 @@ body{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-width: 22.5em;
+    max-width: 23em;
 }
 .color{
     display: flex;
@@ -132,6 +132,9 @@ body{
 }
 #addColor{
     min-width:16.56em;
+}
+#thirdColor{
+    display: none;
 }
 
 @media only screen and (max-width: 420px) {

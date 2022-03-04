@@ -29,21 +29,21 @@
                 <input class="color-picker" type="color" id="color2" value="#fcffc2">
                 <input class="color-Id" type="text" id="ValueColor2" disabled="disabled">
             </div>
-            <div class="color">
-                <input class="color-picker" type="color" id="color3" value="#fcffc2">
+            <div class="color" id="thirdColor">
+                <input class="color-picker" type="color" id="color3" value="#ffaed7">
                 <input class="color-Id" type="text" id="ValueColor3" disabled="disabled">
             </div>
         </div>
 
         <div class="settings">
             <div>
-                <p class="btn" id="addColor"><i class="fa-solid fa-plus"></i>Add one color</p>
+                <p onclick="numberOfColors1()" class="btn" id="addColor"><i class="fa-solid fa-plus"></i>Add one color</p>
             </div>
 
             <div>
                 <label for="colorDirection">Select the derection of BG color</label>
                 <select name="" id="colorDirection" onchange="gradientDirection(this.value)">
-                    <option value="1">Top to bottom</option>
+                    <option value="1" selected>Top to bottom</option>
                     <option value="2">Left to right</option>
                     <option value="5">Right to left</option>
                     <option value="3">Top left to bottom right</option>
